@@ -1,5 +1,5 @@
 from selenium import webdriver
-driver = webdriver.PhantomJS()
+driver = webdriver.Chrome()
 driver.set_window_size(1120, 550)
 driver.get("https://www.eventshigh.com")
 driver.find_element_by_name('events').send_keys("realpython")
