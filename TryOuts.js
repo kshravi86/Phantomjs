@@ -20,7 +20,7 @@ var print = function() {
   console.log("NodeJS is server end JS!");
 };
 print();
-setTimeout(print,5000);
+setTimeout(print,15000);
 <!-- Mutliple Request -->
 function placeAnOrder(addNumber){
   console.log("Customer Order:", addNumber);
