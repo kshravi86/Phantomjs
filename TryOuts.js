@@ -41,11 +41,12 @@ placeAnOrder(5);
 placeAnOrder(6);
 <!-- Mutliple Request -->
 <!-- Module Request -->
-var movies = require('./module');
+<!--
+var movies = require('./module');-->
 <!-- movies.movie(); -->
 <!-- Module Request -->
 <!-- movies.printWIP(); -->
 console.log(movies.favMovie);
 <!-- Shared Module Request -->
-require('./SharedMod1');
-require('./SharedMod2');
+<!-- equire('./SharedMod1');
+require('./SharedMod2'); -->
