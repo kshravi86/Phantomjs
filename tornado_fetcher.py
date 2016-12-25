@@ -110,4 +110,4 @@ class Fetcher(object):
 
 if __name__ == '__main__':
     fetcher = Fetcher()
-    res = fetcher.phantomjs_fetch('http://www.baidu.com')
+    res = fetcher.phantomjs_fetch('http://www.google.com')
