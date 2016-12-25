@@ -39,14 +39,4 @@ placeAnOrder(3);
 placeAnOrder(4);
 placeAnOrder(5);
 placeAnOrder(6);
-<!-- Mutliple Request -->
-<!-- Module Request -->
-<!--
-var movies = require('./module');-->
-<!-- movies.movie(); -->
-<!-- Module Request -->
-<!-- movies.printWIP(); -->
-console.log(movies.favMovie);
-<!-- Shared Module Request -->
-<!-- equire('./SharedMod1');
-require('./SharedMod2'); -->
+
