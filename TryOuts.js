@@ -1,4 +1,5 @@
 console.log('Hello');
+
 var that = {
   printf: function(){
     console.log("This keyword");
@@ -39,4 +40,6 @@ placeAnOrder(3);
 placeAnOrder(4);
 placeAnOrder(5);
 placeAnOrder(6);
+
+
 
