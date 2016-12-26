@@ -22,6 +22,7 @@ var print = function() {
 };
 print();
 setTimeout(print,15000);
+setInterval(print,15000);
 <!-- Mutliple Request -->
 function placeAnOrder(addNumber){
   console.log("Customer Order:", addNumber);
