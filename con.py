@@ -7,5 +7,5 @@ x = np.linspace(0, 4*np.pi, N)
 y0 = np.sin(x) 
 y1 = np.cos(x)
 y2 = np.sin(x) + np.cos(x)
-output_file(“linked_panning.html”)
+output_file('linked_panning.html')
 
