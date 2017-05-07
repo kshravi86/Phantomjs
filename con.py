@@ -1,13 +1,8 @@
+import numpy as np 
+from bokeh.layouts import gridplot
 from bokeh.plotting import figure, output_file, show
 
-x = [1, 2, 3, 4, 5]
-y = [23, 15, 7, 12, 21]
+N = 100
+x = np.linspace(0, 4*np.pi, N) y0 = np.sin(x) y1 = np.cos(x)
+y2 = np.sin(x) + np.cos(x)
 
-
-
-p = figure(title=”Bokeh Demo for OSFY”, x_axis_label=’x’, y_axis_label=’y’)
-
-
-p.line(x, y, legend=”Age”, line_width=3)
-
-show(p)
