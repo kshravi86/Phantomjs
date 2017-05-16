@@ -205,39 +205,39 @@ if __name__ == "__main__":
 	##############################
 	
 	# Simple profile call
-	print "\n********A basic user profile call********"
+	print("\n********A basic user profile call********")
 	response = make_request(client,"http://api.linkedin.com/v1/people/~")
 	print response
 	
 	# Simple profile call, returned in JSON
-	print "\n********Get the profile in JSON********"
+	print("\n********Get the profile in JSON********")
 	response = make_request(client,"http://api.linkedin.com/v1/people/~",{"x-li-format":'json'})
 	print response
 	
 	# Simple profile call, returned in JSON, using query param instead of header
-	print "\n********Get the profile in JSON********"
+	print("\n********Get the profile in JSON********")
 	response = make_request(client,"http://api.linkedin.com/v1/people/~?format=json")
 	print response
 	
 	# Simple connections call
-	print "\n********Get the profile in JSON using query parameter********"
+	print("\n********Get the profile in JSON using query parameter********")
 	response = make_request(client,"http://api.linkedin.com/v1/people/~/connections")
 	print response
 	
 	# Simple connections call
-	print "\n********Get only 10 connections - using parameters********"
+	print("\n********Get only 10 connections - using parameters********")
 	response = make_request(client,"http://api.linkedin.com/v1/people/~/connections?count=10")
 	print response
 	
 	# Get network updates that are shares or connection updates
-	print "\n********GET network updates that are CONN and SHAR********"
+	print("\n********GET network updates that are CONN and SHAR********")
 	response = make_request(client,"http://api.linkedin.com/v1/people/~/network/updates?type=SHAR&type=CONN")
-	print response
+	print(response)
 	
 	# People search using facets and encoding input parameters
-	print "\n********People Search using facets and Encoding input parameters i.e. UTF8********"
+	print("\n********People Search using facets and Encoding input parameters i.e. UTF8********")
 	response = make_request(client,"http://api.linkedin.com/v1/people-search:(people:(first-name,last-name,headline),facets:(code,buckets))?title=D%C3%A9veloppeur&facet=industry,4&facets=location,industry")
-	print response
+	print(response)
 	
 	############################
 	# Writing Data to LinkedIn #
@@ -246,15 +246,15 @@ if __name__ == "__main__":
 	xml_content = get_xml()
 	json_content = get_json()
 	
-	print "\n********Write to the share - using XML********"
+	print("\n********Write to the share - using XML********")
 	api_url = "http://api.linkedin.com/v1/people/~/shares";
 	#response = make_request(client,api_url,{"Content-Type":"text/xml"},"Failed to post share","POST",xml_content)
 	
-	print "\n********Write to the share - using XML, also to twitter********"
+	print("\n********Write to the share - using XML, also to twitter********")
 	api_url = "http://api.linkedin.com/v1/people/~/shares?twitter-post=true";
 	#response = make_request(client,api_url,{"Content-Type":"text/xml"},"Failed to post share","POST",xml_content)
 	
-	print "\n********Write to the share - using JSON********"
+	print("\n********Write to the share - using JSON********")
 	api_url = "http://api.linkedin.com/v1/people/~/shares";
 	response = make_request(client,api_url,{'Content-Type':'application/json'},"Failed to post share","POST",json_content)
 	exit();
@@ -264,35 +264,35 @@ if __name__ == "__main__":
 	############################
 
 
-	print "\n********A basic user profile call with field selectors********"
+	print("\n********A basic user profile call with field selectors********")
 	api_url = "http://api.linkedin.com/v1/people/~:(first-name,last-name,positions)"
 	response = make_request(client,api_url)
-	print response
+	print(response)
 
 
-	print "\n********A basic user profile call with field selectors going into a subresource********"
+	print("\n********A basic user profile call with field selectors going into a subresource********")
 	api_url = "http://api.linkedin.com/v1/people/~:(first-name,last-name,positions:(company:(name)))"
 	response = make_request(client,api_url)
-	print response
+	print(response)
 
 
-	print "\n********A basic user profile call into a subresource return data in JSON********"
+	print("\n********A basic user profile call into a subresource return data in JSON********")
 	api_url = "https://api.linkedin.com/v1/people/~/connections:(first-name,last-name,headline)?format=json"
 	response = make_request(client,api_url)
-	print response
+	print(response)
 
 
-	print "\n********A more complicated example using postings into groups********"
+	print("\n********A more complicated example using postings into groups********")
 	api_url = "http://api.linkedin.com/v1/groups/3297124/posts:(id,category,creator:(id,first-name,last-name),title,summary,creation-timestamp,site-group-post-url,comments,likes)"
 	response = make_request(client,api_url)
-	print response
+	print(response)
 
     ####################################################################################
 	# Understanding the response, creating logging and response headers                #
 	####################################################################################
 
-	print "\n********A basic user profile call and response dissected********"
+	print("\n********A basic user profile call and response dissected********")
 	api_url = "https://api.linkedin.com/v1/people/~";
 	resp,content = client.request(api_url)
 
-	print "\n** Response Headers:\n%s\n" % (resp) 
+	print("\n** Response Headers:\n%s\n" % (resp))
