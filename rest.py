@@ -92,7 +92,7 @@ def make_request(client,url,request_headers={},error_string="Failed Request",met
 		resp,content = client.request(url, method, headers=request_headers, body=body)
 	else:
 		resp,content = client.request(url, method, headers=request_headers)
-	print resp.status
+	print(resp.status)
 		
 	if resp.status >= 200 and resp.status < 300:
 		return content
