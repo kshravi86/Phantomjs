@@ -207,27 +207,27 @@ if __name__ == "__main__":
 	# Simple profile call
 	print("\n********A basic user profile call********")
 	response = make_request(client,"http://api.linkedin.com/v1/people/~")
-	print response
+	print(response)
 	
 	# Simple profile call, returned in JSON
 	print("\n********Get the profile in JSON********")
 	response = make_request(client,"http://api.linkedin.com/v1/people/~",{"x-li-format":'json'})
-	print response
+	print(response)
 	
 	# Simple profile call, returned in JSON, using query param instead of header
 	print("\n********Get the profile in JSON********")
 	response = make_request(client,"http://api.linkedin.com/v1/people/~?format=json")
-	print response
+	print(response)
 	
 	# Simple connections call
 	print("\n********Get the profile in JSON using query parameter********")
 	response = make_request(client,"http://api.linkedin.com/v1/people/~/connections")
-	print response
+	print(response)
 	
 	# Simple connections call
 	print("\n********Get only 10 connections - using parameters********")
 	response = make_request(client,"http://api.linkedin.com/v1/people/~/connections?count=10")
-	print response
+	print(response)
 	
 	# Get network updates that are shares or connection updates
 	print("\n********GET network updates that are CONN and SHAR********")
