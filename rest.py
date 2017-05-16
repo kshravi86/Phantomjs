@@ -54,8 +54,8 @@ def get_auth():
 		content = make_request(client,request_token_url,{},"Failed to fetch request token","POST")
 	
 		request_token = dict(urlparse.parse_qsl(content))
-		print "Go to the following link in your browser:"
-		print "%s?oauth_token=%s" % (authorize_url, request_token['oauth_token'])
+		print("Go to the following link in your browser:")
+		print("%s?oauth_token=%s" % (authorize_url, request_token['oauth_token']))
 	 
 		oauth_verifier = raw_input('What is the PIN? ')
 	 
