@@ -192,7 +192,7 @@ def log_diagnostic_info(client,url,request_headers,method,body,resp,content,erro
 	log += "\n|-> Response object: " + simplejson.dumps(resp) + " <-|"
 	log += "\n|-> Content: " + content + " <-|";
 	log += "\n\n[******************End LinkedIn API Diagnostics************************]\n\n"
-	print log
+	print(log)
 
 
 
