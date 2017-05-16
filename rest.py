@@ -11,8 +11,8 @@ response = api.make_request('GET', '/users/1/')
 api.add_resource('users')
 
 # Get available resources
-api.resources
->>> ['users', 'projects', 'etc']
+#api.resources
+#>>> ['users', 'projects', 'etc']
 
 # Get all objects of a resource
 # GET http://localhost:8000/api/v1/users/
